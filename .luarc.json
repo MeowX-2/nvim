@@ -1,0 +1,9 @@
+{
+    "scripts": {
+    "build": "webpack"
+    },
+    "diagnostics.globals": ["fmta", "vim"],
+    "diagnostics.disable": [
+        "unused-local"
+    ]
+}
