@@ -18,6 +18,7 @@ require("lazy").setup("plugins")
 require("lspconfig").pyright.setup({})
 -------------------------
 vim.cmd("colorscheme duskfox")
+vim.cmd("se cursorline")
 local opts = {}
 
 vim.g.vimtex_view_method = "zathura"
