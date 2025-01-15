@@ -17,7 +17,7 @@ require("vim-options")
 require("lazy").setup("plugins")
 require("lspconfig").pyright.setup({})
 -------------------------
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme duskfox")
 local opts = {}
 
 vim.g.vimtex_view_method = "zathura"
