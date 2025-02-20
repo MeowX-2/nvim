@@ -7,7 +7,7 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
-        -- additional_vim_regex_highlighting = { "latex", "markdown" },
+        additional_vim_regex_highlighting = { "latex", "markdown" },
         -- npm install -g tree-sitter-cli
       },
       indent = { enable = true },
