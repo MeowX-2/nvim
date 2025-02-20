@@ -13,7 +13,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				auto_installed = true,
-				ensure_installed = { "lua_ls", "texlab", "eslint", "html" },
+				ensure_installed = { "lua_ls", "texlab", "eslint", "html","pylsp"},
 				preferences = { disableSuggestions = true },
 			})
 		end,
@@ -73,6 +73,12 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.eslint.setup({
+				capabilities = capabilities,
+				preferences = {
+					disableSuggestions = true,
+				},
+			})
+			lspconfig.pylsp.setup({
 				capabilities = capabilities,
 				preferences = {
 					disableSuggestions = true,
