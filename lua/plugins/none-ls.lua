@@ -3,6 +3,7 @@ return {
 	"nvimtools/none-ls.nvim",
 	config = function()
 		local null_ls = require("null-ls")
+    require("null-ls.client")._request_name_to_capability = {}
 		null_ls.setup({
 			debug = false,
 			sources = {
