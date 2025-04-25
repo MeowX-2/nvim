@@ -1,8 +1,8 @@
 return {
-  s(
-    "tcpp",
-    require("luasnip.extras.fmt").fmt(
-      [[
+	s(
+		"tcpp",
+		require("luasnip.extras.fmt").fmt(
+			[[
 #include<bits/stdc++.h>
 #define ll long long
 #define endl "\n"
@@ -22,26 +22,30 @@ int main() {{
 
 }}
 ]],
-      {}
-    )
-  ),
+			{}
+		)
+	),
 
-  s(
-    "cpp",
-    require("luasnip.extras.fmt").fmt(
-      [[
-#include<bits/stdc++.h>
+	s(
+		"cpp",
+		require("luasnip.extras.fmt").fmt(
+			[[
+#include <bits/stdc++.h>
 #define ll long long
-#define pii pair<int,int>
+#define pii pair<int, int>
 #define endl "\n"
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
 using namespace std;
-const int mxn=1e5+5;
-const int inf=1e9;
+const int mxn = 1e5 + 5;
+const int inf = 1e9;
 int main() {{
-    ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);
+  ios_base::sync_with_stdio(0);
+  cin.tie(NULL);
+  cout.tie(NULL);
 }}
 ]],
-      {}
-    )
-  ),
+			{}
+		)
+	),
 }
