@@ -9,11 +9,17 @@ return {
 		end,
 	},
 	{
+		"nvim-java/nvim-java",
+		config = function()
+			require("java").setup()
+		end,
+	},
+	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
 				auto_installed = true,
-				ensure_installed = { "lua_ls", "texlab", "eslint", "html","pylsp"},
+				ensure_installed = { "lua_ls", "texlab", "eslint", "html", "pylsp" },
 				preferences = { disableSuggestions = true },
 			})
 		end,
