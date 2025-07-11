@@ -1,15 +1,17 @@
 return {
-	s(
-		"tcpp",
-		require("luasnip.extras.fmt").fmt(
-			[[
-#include<bits/stdc++.h>
+  s(
+    "tcpp",
+    require("luasnip.extras.fmt").fmt(
+      [[
+#include <bits/stdc++.h>
 #define ll long long
+#define pii pair<int, int>
 #define endl "\n"
-#define pii pair<int,int>
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
 using namespace std;
-const int mxn=1e5+5;
-const int inf=1e9;
+const int mxn = 1e5 + 5;
+const int inf = 1e9;
 void solve() {{
 
 }}
@@ -22,14 +24,14 @@ int main() {{
 
 }}
 ]],
-			{}
-		)
-	),
+      {}
+    )
+  ),
 
-	s(
-		"cpp",
-		require("luasnip.extras.fmt").fmt(
-			[[
+  s(
+    "cpp",
+    require("luasnip.extras.fmt").fmt(
+      [[
 #include <bits/stdc++.h>
 #define ll long long
 #define pii pair<int, int>
@@ -45,7 +47,7 @@ int main() {{
   cout.tie(NULL);
 }}
 ]],
-			{}
-		)
-	),
+      {}
+    )
+  ),
 }
