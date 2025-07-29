@@ -11,7 +11,10 @@ return {
 #define no cout << "NO" << endl
 #define vi vector<int>
 #define F first
-#define S second
+#
+
+#define read(v, n) for (int i = 0; i < n; ++i) cin >> v[i]
+define S second
 #define PB push_back
 #define MP make_pair
 #define REP(i,a,b) for (int i = a; i <= b; i++)
@@ -41,7 +44,9 @@ int main() {{
     require("luasnip.extras.fmt").fmt(
       [[
 #include <bits/stdc++.h>
-#define ll long long
+#define ll long l
+#define read(v, n) for (int i = 0; i < n; ++i) cin >> v[i]
+
 #define pii pair<int, int>
 #define endl "\n"
 #define yes cout << "YES" << endl
@@ -51,7 +56,7 @@ int main() {{
 #define S second
 #define PB push_back
 #define MP make_pair
-#define REP(i,a,b) for (int i = a; i <= b; i++) 
+#define REP(i,a,b) for (int i = a; i <= b; i++)
 using namespace std;
 const int mxn = 1e5 + 5;
 const int inf = 1e9;
