@@ -11,8 +11,6 @@ return {
 #define no cout << "NO" << endl
 #define vi vector<int>
 #define F first
-#
-
 #define read(v, n) for (int i = 0; i < n; ++i) cin >> v[i]
 define S second
 #define PB push_back
@@ -46,7 +44,6 @@ int main() {{
 #include <bits/stdc++.h>
 #define ll long l
 #define read(v, n) for (int i = 0; i < n; ++i) cin >> v[i]
-
 #define pii pair<int, int>
 #define endl "\n"
 #define yes cout << "YES" << endl
