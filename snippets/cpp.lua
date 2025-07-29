@@ -9,8 +9,12 @@ return {
 #define endl "\n"
 #define yes cout << "YES" << endl
 #define no cout << "NO" << endl
-typedef vector<int> vi;
-typedef pair<int,int> pi;
+#define vi vector<int>
+#define F first
+#define S second
+#define PB push_back
+#define MP make_pair
+#define REP(i,a,b) for (int i = a; i <= b; i++)
 using namespace std;
 const int mxn = 1e5 + 5;
 const int inf = 1e9;
@@ -42,8 +46,12 @@ int main() {{
 #define endl "\n"
 #define yes cout << "YES" << endl
 #define no cout << "NO" << endl
-typedef vector<int> vi;
-typedef pair<int,int> pi;
+#define vi vector<int>
+#define F first
+#define S second
+#define PB push_back
+#define MP make_pair
+#define REP(i,a,b) for (int i = a; i <= b; i++) 
 using namespace std;
 const int mxn = 1e5 + 5;
 const int inf = 1e9;
