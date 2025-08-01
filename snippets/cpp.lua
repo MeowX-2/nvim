@@ -12,7 +12,7 @@ return {
 #define vi vector<int>
 #define F first
 #define read(v, n) for (int i = 0; i < n; ++i) cin >> v[i]
-define S second
+#define S second
 #define PB push_back
 #define MP make_pair
 #define REP(i,a,b) for (int i = a; i <= b; i++)
