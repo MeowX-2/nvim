@@ -21,8 +21,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
@@ -83,6 +83,9 @@ return {
         preferences = {
           disableSuggestions = true,
         },
+      })
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
       })
       -- vim.cmd("vim.diagnsotic.config({ virt_text = { source = false } })")
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

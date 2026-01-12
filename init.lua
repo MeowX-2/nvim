@@ -17,6 +17,7 @@ require("vim-options")
 require("lazy").setup("plugins")
 require("autoclose").setup()
 require("lspconfig").pyright.setup({})
+
 -------------------------
 vim.cmd("colorscheme ofirkai")
 vim.cmd("se cursorline")
