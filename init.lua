@@ -16,15 +16,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
-require("autoclose").setup()
 -------------------------
 vim.cmd("colorscheme ofirkai")
 vim.cmd("se cursorline")
 local opts = {}
-
-vim.g.vimtex_view_method = "zathura"
-vim.g.latex_view_general_viewer = "zathura"
---vim.g.vimtex_compiler_progname = 'nvr'
 
 --local telescope = require('telescope')
 --       telescope.setup {

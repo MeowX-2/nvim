@@ -1,13 +1,13 @@
-vim.cmd("set expandtab")
-vim.cmd("set nu")
-vim.cmd("set rnu")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set breakindent")
-vim.cmd("set linebreak")
-vim.cmd("set hlsearch")
-vim.cmd("set clipboard+=unnamedplus")
+vim.opt.expandtab = true
+vim.opt.nu = true
+vim.opt.rnu = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.breakindent = true
+vim.opt.linebreak = true
+vim.opt.hlsearch = true
+vim.opt.clipboard = "unnamedplus"
 --vim.cmd("set spell")
 --vim.cmd("setlocal spell spelllang=en_us")
 --vim.g.mapleader =
@@ -32,25 +32,10 @@ smap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Ta
 imap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 ]])
-vim.api.nvim_create_autocmd({ "CursorHold" }, {
-  pattern = "*",
-  callback = function()
-    for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
-      if vim.api.nvim_win_get_config(winid).zindex then
-        return
-      end
-    end
-    vim.diagnostic.open_float({
-      scope = "cursor",
-      focusable = true,
-      close_events = {
-        "CursorMoved",
-        "CursorMovedI",
-        "BufHidden",
-        "InsertCharPre",
-        "WinLeave",
-      },
-    })
-  end
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    source = "always",
+  },
 })
 

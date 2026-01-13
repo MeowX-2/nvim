@@ -1,5 +1,8 @@
-return{
+return {
   'lervag/vimtex',
   lazy = false,
-  vim.g.vimtex_syntax_nospell_comments
+  init = function()
+    vim.g.vimtex_view_method = "zathura"
+    vim.g.latex_view_general_viewer = "zathura"
+  end,
 }
