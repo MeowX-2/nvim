@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+require("globals")
 vim.opt.termguicolors = true
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -16,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
 require("autoclose").setup()
-require("lspconfig").pyright.setup({})
 -------------------------
 vim.cmd("colorscheme ofirkai")
 vim.cmd("se cursorline")
