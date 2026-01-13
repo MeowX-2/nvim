@@ -10,7 +10,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "texlab", "eslint", "html", "pylsp", "pyright", "ts_ls", "denols", "cssls" },
+        ensure_installed = { "lua_ls", "texlab", "eslint", "html", "pylsp", "pyright", "ts_ls", "denols", "cssls", "stylua" },
       })
     end,
   },
