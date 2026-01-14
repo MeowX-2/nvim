@@ -23,6 +23,12 @@ vim.api.nvim_create_user_command(
   {}
 )
 
+-- Map y and p to always use the system clipboard
+vim.keymap.set({'n', 'v'}, 'y', '"+y')
+vim.keymap.set({'n', 'v'}, 'p', '"+p')
+vim.keymap.set({'n', 'v'}, 'P', '"+P')
+vim.keymap.set('n', 'yy', '"+yy')
+
 vim.cmd([[
 " Use Tab to expand and jump through snippets
 imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
