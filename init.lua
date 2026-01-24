@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
 -------------------------
-vim.cmd("colorscheme ofirkai")
+vim.cmd("colorscheme kanagawa-wave")
 vim.cmd("se cursorline")
 local opts = {}
 
