@@ -13,14 +13,28 @@ return {
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
-			require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })
+			require("luasnip.loaders.from_lua").load({ paths = vim.fn.stdpath("config") .. "/snippets" })
 			require("luasnip.loaders.from_vscode").lazy_load()
 
 			local ls = require("luasnip")
-			local s = ls.snippet
-			local t = ls.text_node
-			local i = ls.insert_node
-			local fmt = require("luasnip.extras.fmt").fmt
+			ls.config.set_config({
+				enable_autosnippets = true,
+				store_selection_keys = "<Tab>",
+			})
+
+			vim.keymap.set({ "i", "s" }, "<Tab>", function()
+				if ls.expand_or_jumpable() then
+					ls.expand_or_jump()
+				else
+					return "<Tab>"
+				end
+			end, { expr = true, silent = true })
+
+			vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+				if ls.jumpable(-1) then
+					ls.jump(-1)
+				end
+			end, { silent = true })
 
 			cmp.setup({
 				snippet = {

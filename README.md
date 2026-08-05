@@ -1,14 +1,20 @@
 # nvim
 
-Personal NeoVim Config
+Personal Neovim configuration optimized for Competitive Programming and Software Development.
 
 ## Usage
 
-Just clone the repository in `~/.config` directory in other words
+Clone the repository into your config directory:
 
 ```bash
-cd ~/.config
-git clone https://github.com/MeowX-2/nvim.git
+git clone https://github.com/MeowX-2/nvim.git ~/.config/nvim
 ```
 
-Then you should be good to go. It's important that you have `xclip` installed for the copy paste to work globally. 
+Requires Neovim (v0.9+), `g++`, `xclip` (for global clipboard), `ripgrep`, and `Node.js`.
+
+## Keybindings
+
+- **CP Workflow**: `:CP` (open workspace split), `<C-b>` (compile & run C++)
+- **Navigation**: `<C-p>` (find files), `<leader>fg` (live grep), `<C-n>` (file tree)
+- **LSP**: `K` (hover info), `gd` (definition), `<leader>ca` (code action), `<leader>gf` (format)
+- **Debugger**: `<leader>db` (toggle breakpoint), `<leader>dc` (continue)

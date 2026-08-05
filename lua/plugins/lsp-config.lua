@@ -20,7 +20,6 @@ return {
 					"ts_ls",
 					"denols",
 					"cssls",
-					"stylua",
 					"clangd",
 				},
 			})
@@ -30,19 +29,19 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = { "williamboman/mason-lspconfig.nvim" },
 		config = function()
+			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local servers =
-				{ "lua_ls", "texlab", "eslint", "html", "pylsp", "pyright", "ts_ls", "denols", "cssls", "clangd" }
+				{ "lua_ls", "texlab", "eslint", "html", "pyright", "ts_ls", "denols", "cssls", "clangd" }
 			for _, server_name in ipairs(servers) do
-				vim.lsp.config(server_name, {
+				lspconfig[server_name].setup({
 					capabilities = capabilities,
 				})
-				vim.lsp.enable(server_name)
 			end
 
 			-- Special configuration for pylsp
-			vim.lsp.config("pylsp", {
+			lspconfig.pylsp.setup({
 				capabilities = capabilities,
 				settings = {
 					pylsp = {

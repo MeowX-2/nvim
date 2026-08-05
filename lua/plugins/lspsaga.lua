@@ -1,6 +1,8 @@
 return {
 	"nvimdev/lspsaga.nvim",
-	diagnostic = {
-		on_insert = false,
+	opts = {
+		diagnostic = {
+			on_insert = false,
+		},
 	},
 }

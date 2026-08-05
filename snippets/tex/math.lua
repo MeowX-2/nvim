@@ -5,47 +5,26 @@ local in_mathzone = function()
 end
 
 return {
+  s({ trig = "mk", snippetType = "autosnippet" }, fmta("$<>$", { i(1) })),
+  s({ trig = "dm", snippetType = "autosnippet" }, fmta("$$\n<>\n$$", { i(1) })),
   s(
-    "\\frac",
-    fmta(
-      [[
-\frac{<>}{<>}
-]],
-      { i(1), i(2) }
-    ),
+    { trig = "ff", snippetType = "autosnippet" },
+    fmta([[\frac{<>}{<>}]], { i(1), i(2) }),
     { condition = in_mathzone, show_condition = in_mathzone }
   ),
-
   s(
-    "dv",
-    fmta(
-      [[
-\dv{<>}{<>}
-]],
-      { i(1), i(2) }
-    ),
+    { trig = "dv", snippetType = "autosnippet" },
+    fmta([[\dv{<>}{<>}]], { i(1), i(2) }),
     { condition = in_mathzone, show_condition = in_mathzone }
   ),
-
   s(
-    "int",
-    fmta(
-      [[
-\int_{<>}^{<>}
-]],
-      { i(1), i(2) }
-    ),
+    { trig = "int", snippetType = "autosnippet" },
+    fmta([[\int_{<>}^{<>}]], { i(1), i(2) }),
     { condition = in_mathzone, show_condition = in_mathzone }
   ),
-
   s(
-    "sum",
-    fmta(
-      [[
-\sum_{<>}^{<>}
-]],
-      { i(1), i(2) }
-    ),
+    { trig = "sum", snippetType = "autosnippet" },
+    fmta([[\sum_{<>}^{<>}]], { i(1), i(2) }),
     { condition = in_mathzone, show_condition = in_mathzone }
   ),
 }

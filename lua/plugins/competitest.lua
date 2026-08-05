@@ -3,7 +3,7 @@ return {
   dependencies = "MunifTanjim/nui.nvim",
   config = function()
     require("competitest").setup({
-      local_config_file_name = "~/.config/nvim/lua/plugins/competitest.lua",
+      local_config_file_name = vim.fn.stdpath("config") .. "/lua/plugins/competitest.lua",
 
       floating_border = "rounded",
       floating_border_highlight = "FloatBorder",

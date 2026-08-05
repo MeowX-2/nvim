@@ -1,1 +1,4 @@
-return { "ofirgall/ofirkai.nvim" }
+return {
+  "ofirgall/ofirkai.nvim",
+  lazy = true,
+}
