@@ -37,3 +37,15 @@ vim.diagnostic.config({
   },
 })
 
+-- Toggle dark/light theme (<leader>th)
+vim.keymap.set("n", "<leader>th", function()
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+    vim.cmd("colorscheme dayfox")
+  else
+    vim.o.background = "dark"
+    vim.cmd("colorscheme carbonfox")
+  end
+end, { desc = "Toggle Dark/Light Theme" })
+
+
