@@ -48,14 +48,4 @@ vim.keymap.set("n", "<leader>th", function()
   end
 end, { desc = "Toggle Dark/Light Theme" })
 
--- New File Prompt (<leader>fn)
-vim.keymap.set("n", "<leader>fn", function()
-  vim.ui.input({ prompt = "New File: " }, function(input)
-    if input and input ~= "" then
-      vim.cmd("edit " .. vim.fn.fnameescape(input))
-    end
-  end)
-end, { desc = "Prompt for New File" })
-
-
 
